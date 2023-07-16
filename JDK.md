@@ -6,6 +6,17 @@ train ticket platform
 
 #### JDK 17
 
+- Switch
+
+```
+Object a = "Hello";
+switch(a) {
+  case String b -> System.out.println("string b: " + b);
+  case Integer b -> System.out.println("integer b: " + b);
+  default -> System.out.println("default b: " + b);
+}
+```
+
 - Sealed
   - sealed if parent class, at lease one child
   - sealed child class, must be final / sealed / non-sealed
