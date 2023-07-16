@@ -2,7 +2,7 @@
 
 train ticket platform
 
-#### database
+#### Database
 
 #### User module
 

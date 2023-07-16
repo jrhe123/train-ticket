@@ -2,7 +2,7 @@
 
 train ticket platform
 
-#### ticket purchase
+#### Ticket purchase
 
 - e.g., 5 stations A -> B -> C -> D -> E
 - C(2/5) = 10 different selling ticket results
