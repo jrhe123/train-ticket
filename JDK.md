@@ -6,6 +6,20 @@ train ticket platform
 
 #### JDK 14
 
+- instanceof
+
+```
+Object a = "Hello";
+if (a instanceof String) {
+  String b = (String) a;
+  System.out.println("b: " + b);
+}
+
+if (a instanceof String b) {
+  System.out.println("b: " + b);
+}
+```
+
 - multiple line String
 
 ```
