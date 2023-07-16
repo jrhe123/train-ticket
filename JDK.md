@@ -4,6 +4,29 @@ train ticket platform
 
 #### JDK 9 - 17 Changes
 
+#### JDK 11
+
+- single file app
+
+  - cmd: java TestA.java
+  - no need to javac
+
+- shebang (#!)
+  - use java to write script
+  - #!/bin/bash/[java jdk path] --source 11
+  - cmd: chmod +X my_shell_script
+  - cmd: ./my_shell_script
+
+```
+#!/bin/bash/Users/jiaronghe/.sdkman/candidates/java/current/bin/java --source 11
+
+public class TestA {
+  public static void main(String[] args) {
+    System.out.println("Hello");
+  }
+}
+```
+
 #### JDK 10
 
 - var
