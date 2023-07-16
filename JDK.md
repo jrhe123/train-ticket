@@ -6,6 +6,13 @@ train ticket platform
 
 #### JDK 14
 
+- NullPointerException
+
+```
+List list = null;
+list.size();
+```
+
 - instanceof
 
 ```
