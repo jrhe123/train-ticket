@@ -4,6 +4,18 @@ train ticket platform
 
 #### JDK 9 - 17 Changes
 
+#### JDK 17
+
+- Sealed
+  - sealed if parent class, at lease one child
+  - sealed child class, must be final / sealed / non-sealed
+
+```
+public sealed class TestA permits TestB {}
+
+public final class TestB extends TestA {}
+```
+
 #### JDK 16
 
 - Record
