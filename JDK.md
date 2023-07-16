@@ -4,6 +4,13 @@ train ticket platform
 
 #### JDK 9 - 17 Changes
 
+#### JDK 10
+
+- var
+  - can be infer the class type
+  - initialized, only local variable
+  - can not be null
+
 #### JDK 9
 
 - jshell (java playground)
