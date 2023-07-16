@@ -4,6 +4,22 @@ train ticket platform
 
 #### JDK 9 - 17 Changes
 
+#### JDK 14
+
+- multiple line String
+
+```
+String json1 = "{\n"
+				+ "   \"name\":\"roy\"\n"
+				+ "}";
+
+String json2 = """
+				{
+				   "name":"roy"
+				}
+				""";
+```
+
 #### JDK 11
 
 - single file app
