@@ -4,9 +4,11 @@ train ticket platform
 
 #### ticket purchase
 
-```
-station A -> B -> C -> D -> E
+- e.g., 5 stations A -> B -> C -> D -> E
+- C(2/5) = 10 different selling ticket results
+- e.g., if the summary is 0111, so mean only AB is available to sell
 
+```
 section AB BC CD DE summary
 seat
 1       x     x     1010
