@@ -4,6 +4,23 @@ train ticket platform
 
 #### JDK 9 - 17 Changes
 
+#### JDK 16
+
+- Record
+
+```
+public class TestRecord(){
+  private String name;
+  private String password;
+
+  // getter & setter..
+}
+
+public Record TestRecord(String name, String password) {}
+TestRecord testRecord = new TestRecord("name", "password");
+testRecord.name(); // cannot mutate, same as final String
+```
+
 #### JDK 14
 
 - NullPointerException
