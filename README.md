@@ -20,3 +20,5 @@ train ticket platform
   - user ui
 - Admin
   - admin ui
+
+![Copy of Copy of Copy of Copy of Copy of Copy of Copy of Untitled Diagram drawio](https://github.com/jrhe123/train-ticket/assets/17329299/61b1a3cb-1200-4189-8a33-eb6c6bf227b2)
