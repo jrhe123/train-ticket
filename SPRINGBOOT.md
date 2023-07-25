@@ -61,3 +61,8 @@ train ticket platform
   </plugins>
 </build>
 ```
+
+#### Tools
+
+- application.properties <-> application.yaml
+- https://toyaml.com/index.html
