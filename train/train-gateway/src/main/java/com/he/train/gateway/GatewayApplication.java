@@ -10,13 +10,15 @@ import org.springframework.core.env.Environment;
 @SpringBootApplication
 public class GatewayApplication {
 	
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(GatewayApplication.class);
 
+	
 	public static void main(String[] args) {
-		SpringApplication application = new SpringApplication(GatewayApplication.class);
-		application.setWebApplicationType(WebApplicationType.SERVLET);
-		
+		SpringApplication application = new SpringApplication(GatewayApplication.class);		
 		Environment env = application.run(args).getEnvironment();
+		
+		
 		LOGGER.info(">>>>> Start [GatewayApplication]");
 		LOGGER.info(">>>>> Address: http://127.0.0.1:{}", env.getProperty("server.port"));
 	}
