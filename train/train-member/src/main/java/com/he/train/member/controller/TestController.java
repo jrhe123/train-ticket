@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-	@GetMapping("")
-	public String test() {
-		return "123";
-	}
+    @GetMapping("")
+    public String test() {
+        // http://localhost:8001/member/test
+        return "123";
+    }
 }
