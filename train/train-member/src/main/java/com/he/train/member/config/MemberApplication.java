@@ -8,9 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
-@SpringBootApplication(
-        exclude = {DataSourceAutoConfiguration.class}
-)
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @ComponentScan("com.he")
 public class MemberApplication {
 
@@ -23,6 +21,6 @@ public class MemberApplication {
         Environment env = application.run(args).getEnvironment();
 
         LOGGER.info(">>>>> Start [MemberApplication]");
-        LOGGER.info(">>>>> Address: http://127.0.0.1:{}", env.getProperty("server.port"));
+        LOGGER.info(">>>>> Address: http://127.0.0.1:{}{}/test", env.getProperty("server.port"), env.getProperty("server.servlet.context-path"));
     }
 }
