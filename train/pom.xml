@@ -20,9 +20,10 @@
 	
 	<packaging>pom</packaging>
 	<modules>
-		<module>train-gateway</module>
-		<module>train-common</module>
-        <module>train-member</module>
+		<module>gateway</module>
+		<module>common</module>
+        <module>member</module>
+        <module>generator</module>
     </modules>
 	
 	
@@ -56,7 +57,7 @@
 
             <dependency>
                 <groupId>com.he</groupId>
-                <artifactId>train-common</artifactId>
+                <artifactId>common</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
@@ -101,17 +102,17 @@
             -->
 
             <!-- kaptcha -->
-            <dependency>
-                <groupId>com.github.penggle</groupId>
-                <artifactId>kaptcha</artifactId>
-                <version>2.3.2</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.servlet</groupId>
-                        <artifactId>javax.servlet-api</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.github.penggle</groupId>-->
+<!--                <artifactId>kaptcha</artifactId>-->
+<!--                <version>2.3.2</version>-->
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <groupId>javax.servlet</groupId>-->
+<!--                        <artifactId>javax.servlet-api</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+<!--            </dependency>-->
 
 			<!-- 
             <dependency>

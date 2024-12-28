@@ -6,16 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="train-common" />
-        <module name="train-gateway" />
-        <module name="train-member" />
+        <module name="member" />
+        <module name="generator" />
+        <module name="common" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="train-common" target="17" />
+      <module name="train-gateway" target="17" />
+      <module name="train-generator" target="17" />
+      <module name="train-member" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="generator" options="-parameters" />
+      <module name="member" options="-parameters" />
       <module name="train-common" options="-parameters" />
       <module name="train-gateway" options="-parameters" />
+      <module name="train-generator" options="-parameters" />
       <module name="train-member" options="-parameters" />
     </option>
   </component>
