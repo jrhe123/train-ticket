@@ -44,8 +44,7 @@ public class LogAspect {
         MDC.put("LOG_ID", System.currentTimeMillis() + RandomUtil.randomString(3));
 
         // Logger
-        ServletRequestAttributes attributes =
-                (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         Signature signature = joinPoint.getSignature();
         String name = signature.getName();
@@ -63,9 +62,7 @@ public class LogAspect {
         // Ignore special args, e.g., file type
         Object[] arguments = new Object[args.length];
         for (int i = 0; i < args.length; i++) {
-            if (args[i] instanceof ServletRequest ||
-                    args[i] instanceof ServletResponse ||
-                    args[i] instanceof MultipartFile) {
+            if (args[i] instanceof ServletRequest || args[i] instanceof ServletResponse || args[i] instanceof MultipartFile) {
                 continue;
             }
             arguments[i] = args[i];
@@ -74,9 +71,7 @@ public class LogAspect {
          * Reserved fields, sensitive fields or fields that are too long are not displayed:
          * ID, mobile number, email address, password, etc.
          */
-        String[] excludeProperties = {
-                "mobile", "password",
-        };
+        String[] excludeProperties = {"mobile", "password",};
         PropertyPreFilters filters = new PropertyPreFilters();
         PropertyPreFilters.MySimplePropertyPreFilter excludefilter = filters.addFilter();
         excludefilter.addExcludes(excludeProperties);
@@ -91,15 +86,12 @@ public class LogAspect {
          * Reserved fields, sensitive fields or fields that are too long are not displayed:
          * ID, mobile number, email address, password, etc.
          */
-        String[] excludeProperties = {
-                "mobile", "password",
-        };
+        String[] excludeProperties = {"mobile", "password",};
         PropertyPreFilters filters = new PropertyPreFilters();
         PropertyPreFilters.MySimplePropertyPreFilter excludefilter = filters.addFilter();
         excludefilter.addExcludes(excludeProperties);
         LOG.info("Return response: {}", JSONObject.toJSONString(result, excludefilter));
-        LOG.info("------------- END Time Elapse {} ms -------------",
-                System.currentTimeMillis() - startTime);
+        LOG.info("------------- END Time Elapse {} ms -------------", System.currentTimeMillis() - startTime);
         return result;
     }
 

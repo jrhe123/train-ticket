@@ -56,7 +56,7 @@
 
             <dependency>
                 <groupId>com.he</groupId>
-                <artifactId>common</artifactId>
+                <artifactId>train-common</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
