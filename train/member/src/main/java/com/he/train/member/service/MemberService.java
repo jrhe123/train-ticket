@@ -1,6 +1,8 @@
 package com.he.train.member.service;
 
 import cn.hutool.core.collection.CollUtil;
+import com.he.train.common.exception.BusinessException;
+import com.he.train.common.exception.BusinessExceptionEnum;
 import com.he.train.member.domain.Member;
 import com.he.train.member.domain.MemberExample;
 import com.he.train.member.mapper.MemberMapper;
@@ -17,9 +19,7 @@ public class MemberService {
     private MemberMapper memberMapper;
 
     public int count() {
-        return Math.toIntExact(
-                memberMapper.countByExample(null)
-        );
+        return Math.toIntExact(memberMapper.countByExample(null));
     }
 
     public long register(MemberRegisterReq req) {
@@ -31,7 +31,7 @@ public class MemberService {
         // check existing member
         if (CollUtil.isNotEmpty(list)) {
             // return list.get(0).getId();
-            throw new RuntimeException("Mobile already registered");
+            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_EXIST);
         }
 
         Member member = new Member();
