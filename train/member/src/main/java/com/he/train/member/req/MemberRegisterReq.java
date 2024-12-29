@@ -1,7 +1,10 @@
 package com.he.train.member.req;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class MemberRegisterReq {
 
+    @NotBlank(message = "mobile is required")
     private String mobile;
 
     public String getMobile() {

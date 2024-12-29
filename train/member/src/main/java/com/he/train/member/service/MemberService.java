@@ -3,6 +3,7 @@ package com.he.train.member.service;
 import cn.hutool.core.collection.CollUtil;
 import com.he.train.common.exception.BusinessException;
 import com.he.train.common.exception.BusinessExceptionEnum;
+import com.he.train.common.util.SnowUtil;
 import com.he.train.member.domain.Member;
 import com.he.train.member.domain.MemberExample;
 import com.he.train.member.mapper.MemberMapper;
@@ -35,7 +36,9 @@ public class MemberService {
         }
 
         Member member = new Member();
-        member.setId(System.currentTimeMillis());
+        member.setId(
+                SnowUtil.getSnowflakeNextId()
+        );
         member.setMobile(mobile);
 
         memberMapper.insert(member);
