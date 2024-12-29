@@ -12,9 +12,11 @@
   </a-layout>
 </template>
 <script>
-import { defineComponent } from 'vue';
+import {defineComponent, ref} from 'vue';
 import TheHeaderView from "@/components/the-header";
 import TheSiderView from "@/components/the-sider";
+import axios from "axios";
+import {notification} from "ant-design-vue";
 
 export default defineComponent({
   components: {
@@ -22,7 +24,18 @@ export default defineComponent({
     TheHeaderView,
   },
   setup() {
+    const count = ref();
+    axios.get("/member/member/count").then(response => {
+      let data = response.data
+      if (data.success) {
+        count.value = data.content;
+      } else {
+        notification.error({message: data.message});
+      }
+    })
+
     return {
+      count
     };
   },
 });
