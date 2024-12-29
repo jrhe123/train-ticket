@@ -6,7 +6,7 @@
       </router-link>
     </div>
     <div style="float: right; color: white;">
-<!--      Hello {{member.mobile}} &nbsp;&nbsp;-->
+      Hello {{member.mobile}} &nbsp;&nbsp;
       <router-link to="/login" style="color: white;">
         Logout
       </router-link>
