@@ -75,7 +75,7 @@ export default defineComponent({
         if (data.success) {
           notification.success({ description: 'Logged in!' });
           // logged in & redirect
-          router.push("/");
+          router.push("/welcome");
           store.commit("setMember", data.content);
         } else {
           notification.error({ description: data.message });
