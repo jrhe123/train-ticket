@@ -1,14 +1,12 @@
 package com.he.train.member.req;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 
 public class PassengerSaveReq {
     private Long id;
 
-    @NotNull(message = "member id is required")
     private Long memberId;
 
     @NotBlank(message = "name is required")

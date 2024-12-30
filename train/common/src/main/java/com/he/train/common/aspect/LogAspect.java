@@ -2,8 +2,6 @@ package com.he.train.common.aspect;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.support.spring.PropertyPreFilters;
-
-import cn.hutool.core.util.RandomUtil;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +12,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.jboss.logging.MDC;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -40,8 +37,8 @@ public class LogAspect {
 
     @Before("controllerPointcut()")
     public void doBefore(JoinPoint joinPoint) {
-        // Add custom attribute "LOG_ID"
-        MDC.put("LOG_ID", System.currentTimeMillis() + RandomUtil.randomString(3));
+//        // Add custom attribute "LOG_ID"
+//        MDC.put("LOG_ID", System.currentTimeMillis() + RandomUtil.randomString(3));
 
         // Logger
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();

@@ -2,6 +2,7 @@ package com.he.train.member.service;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateTime;
+import com.he.train.common.context.LoginMemberContext;
 import com.he.train.common.util.SnowUtil;
 import com.he.train.member.domain.Passenger;
 import com.he.train.member.mapper.PassengerMapper;
@@ -20,6 +21,7 @@ public class PassengerService {
         Passenger passenger = BeanUtil.copyProperties(req, Passenger.class);
 
         passenger.setId(SnowUtil.getSnowflakeNextId());
+        passenger.setMemberId(LoginMemberContext.getId());
         passenger.setCreateTime(now);
         passenger.setUpdateTime(now);
         passengerMapper.insert(passenger);
